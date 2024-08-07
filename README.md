@@ -1,6 +1,6 @@
 # 11ty-Serene
 
-A minimal theme of a landing page, featuring simple structure, smooth scrolling and scroll revealing. 
+A minimal theme for a landing page, featuring a simple structure, smooth scrolling, and scroll-revealing effects.
 
 Built with [11ty](https://www.11ty.dev/) and [Tailwind CSS](https://tailwindcss.com/).
 
