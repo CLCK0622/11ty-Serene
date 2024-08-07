@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    table {
+        @apply border-collapse border-y text-base md:text-lg table-fixed;
+    }
+
+    thead {
+        @apply bg-gray-50 dark:bg-slate-700;
+    }
+
+    th,
+    td,
+    tr {
+        @apply border-collapse border-y py-2 pl-2;
+    }
+
+    hr {
+        @apply opacity-25;
+    }
+
+    .box {
+        @apply p-8 rounded-2xl shadow hover:shadow-lg mx-auto text-left w-11/12 md:max-w-xl xl:max-w-3xl 2xl:max-w-4xl mt-10 bg-white dark:bg-slate-600 dark:text-white dark:shadow-gray-600/25 dark:hover:shadow-[0_25px_20px_-5px_rgba(75,85,99,0.25),0_8px_10px_-6px_rgba(75,85,99,0.25)];
+    }
+
+    .box:first-of-type {
+        @apply mt-20
+    }
+
+    .box:last-of-type {
+        @apply mb-20
+    }
+
+    .link {
+        @apply text-blue-500 hover:underline dark:text-blue-300;
+    }
+
+    h1 {
+        @apply text-2xl md:text-4xl font-bold mb-4 font-title;
+    }
+
+    h2 {
+        @apply text-lg md:text-2xl font-bold mb-2 font-title;
+    }
+
+}
+
+html.sr .tag {
+    visibility: hidden;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .25s;
+    transition: .25s;
+  }
+  
+  input:checked + .slider {
+    background-color: #606060;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #606060;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 25px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
