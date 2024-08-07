@@ -38,7 +38,7 @@
     }
 
     .link {
-        @apply text-blue-500 hover:underline dark:text-blue-300;
+        @apply text-blue-600 hover:underline dark:text-blue-200;
     }
 
     h1 {
