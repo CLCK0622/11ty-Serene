@@ -6,6 +6,8 @@ Built with [11ty](https://www.11ty.dev/) and [Tailwind CSS](https://tailwindcss.
 
 Made by [CLCK](https://github.com/CLCK0622).
 
+![image](https://github.com/user-attachments/assets/be07029e-ae7a-43b7-a66a-7cd3550afa24)
+
 ## Install (all scripts are using `pnpm` by default)
 
 ```
