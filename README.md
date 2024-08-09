@@ -6,7 +6,7 @@ Built with [11ty](https://www.11ty.dev/) and [Tailwind CSS](https://tailwindcss.
 
 Made by [CLCK](https://github.com/CLCK0622).
 
-## Install
+## Install (all scripts are using `pnpm` by default)
 
 ```
 pnpm install
