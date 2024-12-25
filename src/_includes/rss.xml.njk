@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>11ty-Serene</title>
+    <link>https://www.your.site/</link>
+    <description>Welcome to 11ty-Serene!</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ collections.blog[0].date | dateToRfc822 }}</lastBuildDate>
+
+    {% for post in collections.blog %}
+    <item>
+      <title>{{ post.data.title }}</title>
+      <link>https://www.your.site{{ post.url }}</link>
+      <description>{{ post.data.description }}</description>
+      <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

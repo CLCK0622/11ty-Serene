@@ -7,6 +7,8 @@ order: 3
 
 # 💡 Blogs
 
+Stay updated with [my RSS Feed](/blog/rss.xml)!
+
 <ul class="blogList">
   {% for post in collections.blog %}
   <li class=blogListItem>
