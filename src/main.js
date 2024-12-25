@@ -40,12 +40,3 @@ function change_mode() {
     }
     updateGiscusTheme();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    ScrollReveal().reveal("body *", {
-        reset: true,
-        distance: "0px",
-        duration: 400,
-        easing: "ease-in-out"
-    });
-});
