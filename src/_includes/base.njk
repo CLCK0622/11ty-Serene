@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title | safe }} - 11ty-Serene</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <meta property="og:title" content="{{ title | safe }} - 11ty-Serene" />
+  <meta property="og:description" content="Write here..." />
+  <meta property="og:url" content="https://github.com/CLCK0622/11ty-Serene" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="/main.js"></script>
+</head>
+<body class="main-body">
+
+  <div class="box nav-box">
+    <nav class="nav-bar">
+      <div class="nav-title">11ty-Serene</div>
+      <div class="nav-links">
+        {% for page in collections.pages %}
+          <a href="{{ page.url }}" class="nav-link">{{ page.data.title }}</a>
+        {% endfor %}
+      </div>
+      <span class="dark-toggle">
+        <span class="material-symbols-outlined">light_mode</span>
+        <label class="switch">
+          <input
+            type="checkbox"
+            id="darkmode"
+            onclick="change_mode()"
+            aria-labelledby="darkmodelabel"
+          />
+          <span class="slider round"></span>
+        </label>
+        <span class="material-symbols-outlined">dark_mode</span>
+      </span>
+    </nav>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="box">{{ content | safe }}</div>
+
+    <div class="box footer footer-box">
+      
+      <p class="footer-text">© 2025 <a href="https://www.clckblog.space/" class="link">Kevin Zhong (CLCK)</a></p>
+      <p class="footer-text">Built with <a href="https://www.11ty.dev/" class="link" target="_blank">11ty</a>. Powered by <a href="https://vercel.com/" class="link" target="_blank">Vercel</a>.</p>
+      <p class="footer-text">Theme <a href="https://github.com/CLCK0622/11ty-Serene" class="link" target="_blank">11ty-Serene</a>.</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -27,3 +27,13 @@ function change_mode() {
         htmlElement.classList.remove('dark');
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    ScrollReveal().reveal("body *", {
+      reset: true,
+      distance: "0px",
+      duration: 400,
+      easing: "ease-in-out"
+    });
+  });
+  

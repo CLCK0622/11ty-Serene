@@ -1,24 +1,20 @@
 {
-  "name": "Homepage",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build:css": "postcss src/styles.css -o _site/styles.css",
-    "build": "pnpm build:css && eleventy",
-    "start": "pnpm build && eleventy --serve"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "scrollreveal": "^4.0.9",
-    "tailwindcss": "^3.4.7"
-  },
-  "devDependencies": {
-    "postcss-cli": "^11.0.0"
-  }
+    "name": "Homepage",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "watch:css": "sass src/styles.scss _site/styles.css --watch",
+        "build:css": "sass src/styles.scss _site/styles.css --no-source-map",
+        "build": "pnpm build:css && eleventy",
+        "start": "eleventy --serve"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@11ty/eleventy": "^3.0.0",
+        "sass": "^1.80.4",
+        "scrollreveal": "^4.0.9"
+    }
 }

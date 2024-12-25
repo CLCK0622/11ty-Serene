@@ -1,4 +1,11 @@
-# 11ty-Serene
+---
+title: "Intro"
+layout: "base.njk"
+permalink: "/"
+order: 1
+---
+
+# 👋 Hi there!
 
 A minimal theme for a landing page, featuring a simple structure, smooth scrolling, and scroll-revealing effects.
 
@@ -24,3 +31,4 @@ pnpm run build
 pnpm run watch:css
 pnpm run start
 ```
+

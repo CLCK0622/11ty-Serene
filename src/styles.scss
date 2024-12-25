@@ -1,0 +1,317 @@
+// 字体导入
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gentium Book Plus", "Source Serif 4", serif;
+  font-weight: 500;
+  background-color: rgb(249 250 251);
+  color: #1f2937;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+// 标题
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Gentium Book Plus", "Source Sans 3", sans-serif;
+  color: #111827;
+  font-weight: 700;
+}
+
+p,
+a,
+span,
+li,
+td,
+th {
+  font-family: "Source Serif 4", serif;
+  color: #1f2937;
+}
+
+// 链接
+a {
+  color: #2563eb;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 变量
+$primary-bg-color: #ffffff;
+$primary-text-color: #1f2937;
+$secondary-text-color: #4b5563;
+$border-color: #d1d5db;
+$border-radius: 0.5rem;
+
+// 盒子
+.box {
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: $primary-bg-color;
+  color: $primary-text-color;
+  max-width: 1000px;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.box:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-box {
+  margin-top: 2rem;
+}
+
+.footer-box {
+  margin-bottom: 4rem;
+}
+
+// 导航栏
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  flex: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  flex: initial;
+  margin-right: 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+// 内容
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+// 标题
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+// 链接
+.link {
+  color: #2563eb;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// 视频
+.video-container {
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 80%;
+    min-width: 400px;
+    padding-top: 45%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+// 表格
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1rem;
+  color: $secondary-text-color;
+  text-align: center;
+  background-color: $primary-bg-color;
+
+  th,
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid $border-color;
+  }
+
+  thead {
+    background-color: rgb(249 250 251);
+  }
+}
+
+// 页脚
+.footer {
+  width: 100%;
+}
+
+// 切换按钮
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.25s;
+      border-radius: 50%;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: #606060;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+}
+
+.dark-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: initial;
+}
+
+.material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+// 黑暗模式
+html.dark {
+  body {
+    background-color: #1e293b;
+    color: #e2e8f0;
+  }
+
+  p,
+  a,
+  span,
+  li,
+  td,
+  th {
+    color: #e2e8f0;
+  }
+
+  table {
+    thead {
+      background-color: #1e293b;
+    }
+    background-color: #334155;
+  }
+
+  .box {
+    background-color: #334155;
+    color: #e2e8f0;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .box:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-title,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #e2e8f0;
+  }
+
+  .nav-link {
+    color: #93c5fd;
+  }
+
+  a {
+    color: #93c5fd;
+  }
+
+  .switch .slider {
+    background-color: #374151;
+  }
+
+  .switch .slider:before {
+    background-color: #1f2937;
+  }
+
+  input:checked + .slider {
+    background-color: #d1d5db;
+  }
+
+  .dark-toggle label {
+    color: #e2e8f0;
+  }
+}
