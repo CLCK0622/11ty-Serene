@@ -2,6 +2,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     init_mode();
 });
 
+function updateGiscusTheme() {
+    const theme = localStorage.theme === 'dark' ? 'dark' : 'light';
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe) {
+        iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: theme } } },
+            'https://giscus.app'
+        );
+    }
+}
+
 function init_mode() {
     const darkmodeCheckbox = document.getElementById("darkmode");
     const htmlElement = document.documentElement;
@@ -13,6 +24,7 @@ function init_mode() {
         darkmodeCheckbox.checked = false;
         htmlElement.classList.remove('dark');
     }
+    updateGiscusTheme();
 }
 
 function change_mode() {
@@ -26,14 +38,14 @@ function change_mode() {
         localStorage.theme = 'light';
         htmlElement.classList.remove('dark');
     }
+    updateGiscusTheme();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     ScrollReveal().reveal("body *", {
-      reset: true,
-      distance: "0px",
-      duration: 400,
-      easing: "ease-in-out"
+        reset: true,
+        distance: "0px",
+        duration: 400,
+        easing: "ease-in-out"
     });
-  });
-  
+});

@@ -11,6 +11,9 @@ importers:
       '@11ty/eleventy':
         specifier: ^3.0.0
         version: 3.0.0
+      luxon:
+        specifier: ^3.5.0
+        version: 3.5.0
       sass:
         specifier: ^1.80.4
         version: 1.80.4
