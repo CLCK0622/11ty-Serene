@@ -6,11 +6,14 @@
     <description>Welcome to 11ty-Serene!</description>
     <language>en-us</language>
     <lastBuildDate>{{ collections.blog[0].date | dateToRfc822 }}</lastBuildDate>
+    <atom:link href="https://www.your.site/blog/rss.xml" rel="self" type="application/rss+xml" />
+
 
     {% for post in collections.blog %}
     <item>
       <title>{{ post.data.title }}</title>
       <link>https://www.your.site{{ post.url }}</link>
+      <guid>https://www.your.site{{ post.url }}</guid>
       <description>{{ post.data.description }}</description>
       <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
     </item>
