@@ -6,7 +6,7 @@ Built with [11ty](https://www.11ty.dev/) and [Sass](https://sass-lang.com/).
 
 Made by [CLCK](https://github.com/CLCK0622).
 
-![image](https://github.com/user-attachments/assets/8c1874e4-8711-41a4-a545-4e4f271e654d)
+<img width="2528" height="1696" alt="image" src="https://github.com/user-attachments/assets/4cb8e646-6c38-49db-b80d-8f8685677eb4" />
 
 ## Install (all scripts are using `pnpm` by default)
 
