@@ -29,6 +29,6 @@ pnpm run start
 
 ![Alt](https://repobeats.axiom.co/api/embed/8b0541affca62356c769560c9e76935889b4096f.svg "Repobeats analytics image")
 
-## Star History
+<!-- ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=CLCK0622/11ty-Serene&type=Date)](https://www.star-history.com/#CLCK0622/11ty-Serene&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=CLCK0622/11ty-Serene&type=Date)](https://www.star-history.com/#CLCK0622/11ty-Serene&Date) -->
